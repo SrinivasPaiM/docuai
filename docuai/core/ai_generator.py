@@ -38,10 +38,10 @@ class AICommentGenerator:
     def _setup_model(self):
         """Setup the AI model for comment generation."""
         try:
-            if self.use_local_model:
+            if self.use_local_model and self.model_name != "rule-based":
                 print("Loading local model...")
                 # Use a smaller, free model that's good for code generation
-                model_name = "microsoft/DialoGPT-medium"  # Free and lightweight
+                model_name = self.model_name
                 
                 self.tokenizer = AutoTokenizer.from_pretrained(model_name)
                 self.model = AutoModelForCausalLM.from_pretrained(
@@ -66,10 +66,10 @@ class AICommentGenerator:
                 )
                 
             else:
-                # Use HuggingFace API (requires API key)
-                print("Using HuggingFace API...")
-                # This would require HF_API_TOKEN environment variable
-                pass
+                # Use rule-based generation (no AI model)
+                print("Using rule-based comment generation...")
+                self.model = None
+                self.pipeline = None
                 
         except Exception as e:
             print(f"Error setting up model: {e}")

@@ -30,16 +30,16 @@ class CodeAnalyzer:
     def _setup_parsers(self):
         """Setup tree-sitter parsers for supported languages."""
         try:
-            # Try to load language libraries
+            # Try to load language libraries - fixed constructor calls
             languages = {
-                'python': tree_sitter.Language('tree_sitter_python', 'python'),
-                'javascript': tree_sitter.Language('tree_sitter_javascript', 'javascript'),
-                'typescript': tree_sitter.Language('tree_sitter_typescript', 'typescript'),
-                'java': tree_sitter.Language('tree_sitter_java', 'java'),
-                'cpp': tree_sitter.Language('tree_sitter_cpp', 'cpp'),
-                'c': tree_sitter.Language('tree_sitter_c', 'c'),
-                'go': tree_sitter.Language('tree_sitter_go', 'go'),
-                'rust': tree_sitter.Language('tree_sitter_rust', 'rust'),
+                'python': tree_sitter.Language('tree_sitter_python'),
+                'javascript': tree_sitter.Language('tree_sitter_javascript'),
+                'typescript': tree_sitter.Language('tree_sitter_typescript'),
+                'java': tree_sitter.Language('tree_sitter_java'),
+                'cpp': tree_sitter.Language('tree_sitter_cpp'),
+                'c': tree_sitter.Language('tree_sitter_c'),
+                'go': tree_sitter.Language('tree_sitter_go'),
+                'rust': tree_sitter.Language('tree_sitter_rust'),
             }
             
             for lang_name, lang in languages.items():
