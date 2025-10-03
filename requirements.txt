@@ -1,0 +1,30 @@
+# Core dependencies
+gitpython>=3.1.40
+requests>=2.31.0
+python-dotenv>=1.0.0
+click>=8.1.7
+pyyaml>=6.0.1
+
+# AI/ML dependencies for free models
+transformers>=4.35.0
+torch>=2.1.0
+tokenizers>=0.14.0
+accelerate>=0.24.0
+
+# Code analysis
+tree-sitter>=0.20.4
+tree-sitter-python>=0.20.4
+tree-sitter-javascript>=0.20.4
+tree-sitter-typescript>=0.20.4
+tree-sitter-java>=0.20.4
+tree-sitter-cpp>=0.20.4
+tree-sitter-c>=0.20.4
+tree-sitter-go>=0.20.4
+tree-sitter-rust>=0.20.4
+
+# GitHub integration
+PyGithub>=1.59.1
+
+# Utilities
+rich>=13.7.0
+tqdm>=4.66.1
