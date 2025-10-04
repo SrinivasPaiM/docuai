@@ -1,4 +1,4 @@
-# DocuAI 🤖
+# DocuAI V1 (discontinued)
 
 **AI-powered code documentation generator that automatically detects undocumented functions/classes and creates pull requests with generated documentation.**
 
